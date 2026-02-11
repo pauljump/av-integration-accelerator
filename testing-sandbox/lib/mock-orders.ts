@@ -1,5 +1,5 @@
 /**
- * Mock Order Generator for AV Integration Testing
+ * Mock Order Generator for RoboBuilder
  *
  * Generates realistic order payloads for testing POS integrations.
  * Includes standard courier orders and autonomous vehicle orders.

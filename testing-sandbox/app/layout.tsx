@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AV Integration Toolkit",
+  title: "RoboBuilder",
   description:
     "Self-service toolkit for POS integrators to learn, build, test, and validate autonomous vehicle delivery support.",
 };

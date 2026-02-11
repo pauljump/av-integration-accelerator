@@ -46,7 +46,6 @@ const avOrder = {
   ],
 };
 
-// Fields that are different or new in AV orders
 const highlightFields = [
   "is_autonomous",
   "passcode",
@@ -108,15 +107,15 @@ function renderJsonLines(
         className={`px-4 font-mono text-sm leading-6 ${
           isAVField
             ? isSelected
-              ? "bg-blue-100 border-l-2 border-blue-500 cursor-pointer"
-              : "bg-yellow-50 border-l-2 border-yellow-400 cursor-pointer hover:bg-yellow-100"
+              ? "bg-accent/15 border-l-2 border-accent cursor-pointer"
+              : "bg-accent/5 border-l-2 border-accent/40 cursor-pointer hover:bg-accent/10"
             : matchedField
-              ? "bg-gray-50"
+              ? "bg-surface-2/50"
               : ""
         }`}
         onClick={isAVField ? () => onFieldClick(matchedField!) : undefined}
       >
-        {line}
+        <span className="text-text-secondary">{line}</span>
       </div>
     );
   });
@@ -137,12 +136,12 @@ export default function JsonDiff() {
         {/* Standard Order */}
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="px-2 py-0.5 bg-gray-200 text-gray-700 text-xs font-medium rounded">
+            <span className="px-2 py-0.5 bg-surface-2 text-text-secondary text-xs font-medium rounded border border-border">
               Standard Order
             </span>
-            <span className="text-xs text-gray-500">Human courier delivery</span>
+            <span className="text-xs text-text-tertiary">Human courier</span>
           </div>
-          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden overflow-x-auto">
+          <div className="bg-surface border border-border rounded-lg overflow-hidden overflow-x-auto">
             <pre className="py-2">
               {renderJsonLines(standardOrder, handleFieldClick, selectedField)}
             </pre>
@@ -152,14 +151,14 @@ export default function JsonDiff() {
         {/* AV Order */}
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded">
+            <span className="px-2 py-0.5 bg-accent/10 text-accent text-xs font-medium rounded border border-accent/20">
               AV Order
             </span>
-            <span className="text-xs text-gray-500">
-              Click highlighted fields to learn more
+            <span className="text-xs text-text-tertiary">
+              Click highlighted fields
             </span>
           </div>
-          <div className="bg-white border border-blue-200 rounded-lg overflow-hidden overflow-x-auto">
+          <div className="bg-surface border border-accent/20 rounded-lg overflow-hidden overflow-x-auto">
             <pre className="py-2">
               {renderJsonLines(avOrder, handleFieldClick, selectedField)}
             </pre>
@@ -169,11 +168,11 @@ export default function JsonDiff() {
 
       {/* Field Info Panel */}
       {info && (
-        <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <div className="mt-4 bg-accent/5 border border-accent/20 rounded-lg p-4">
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg
-                className="w-4 h-4 text-blue-600"
+                className="w-4 h-4 text-accent"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
@@ -187,9 +186,11 @@ export default function JsonDiff() {
               </svg>
             </div>
             <div>
-              <h4 className="font-semibold text-blue-900">{info.title}</h4>
-              <p className="text-sm text-blue-800 mt-1">{info.description}</p>
-              <code className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded mt-2 inline-block">
+              <h4 className="font-semibold text-white">{info.title}</h4>
+              <p className="text-sm text-text-secondary mt-1">
+                {info.description}
+              </p>
+              <code className="text-xs bg-surface-2 text-accent px-2 py-0.5 rounded mt-2 inline-block border border-border">
                 order.deliveries[].vehicle.{info.field}
               </code>
             </div>

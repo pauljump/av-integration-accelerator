@@ -19,15 +19,15 @@ export default function CodeSnippet() {
   return (
     <div>
       {/* Language Tabs */}
-      <div className="flex gap-1 bg-gray-100 p-1 rounded-lg mb-6 w-fit">
+      <div className="flex gap-0.5 bg-surface rounded-lg p-1 mb-6 w-fit border border-border">
         {languages.map((lang) => (
           <button
             key={lang.key}
             onClick={() => setActiveLanguage(lang.key)}
             className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
               activeLanguage === lang.key
-                ? "bg-white text-gray-900 shadow-sm"
-                : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                ? "bg-surface-2 text-white"
+                : "text-text-secondary hover:text-white"
             }`}
           >
             {lang.label}
@@ -36,22 +36,24 @@ export default function CodeSnippet() {
       </div>
 
       {/* Code Blocks */}
-      <div className="space-y-6">
+      <div className="space-y-4">
         {snippets.blocks.map((block, index) => (
           <div
             key={`${activeLanguage}-${index}`}
-            className="bg-white border border-gray-200 rounded-lg overflow-hidden"
+            className="bg-surface border border-border rounded-lg overflow-hidden"
           >
             {/* Block Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-gray-50">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border">
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-gray-400">
+                  <span className="text-xs font-mono text-text-tertiary">
                     {index + 1}/{snippets.blocks.length}
                   </span>
-                  <h3 className="font-semibold text-gray-900">{block.title}</h3>
+                  <h3 className="font-semibold text-white text-sm">
+                    {block.title}
+                  </h3>
                 </div>
-                <p className="text-sm text-gray-600 mt-0.5">
+                <p className="text-xs text-text-secondary mt-0.5">
                   {block.description}
                 </p>
               </div>
@@ -60,7 +62,7 @@ export default function CodeSnippet() {
 
             {/* Code */}
             <div className="overflow-x-auto">
-              <pre className="p-4 text-sm text-gray-800 leading-relaxed">
+              <pre className="p-4 text-sm text-text-secondary leading-relaxed">
                 <code>{block.code}</code>
               </pre>
             </div>

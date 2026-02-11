@@ -18,43 +18,41 @@ export default function KdsMockup({
   driverName,
 }: KdsMockupProps) {
   return (
-    <div className="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+    <div className="bg-surface rounded-lg overflow-hidden border border-border">
       {/* KDS Header */}
-      <div className="bg-gray-800 px-4 py-2 flex items-center justify-between">
+      <div className="bg-surface-2 px-4 py-2 flex items-center justify-between border-b border-border">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-green-400" />
-          <span className="text-gray-400 text-xs font-mono">
+          <div className="w-2 h-2 rounded-full bg-accent" />
+          <span className="text-text-tertiary text-xs font-mono">
             Kitchen Display System
           </span>
         </div>
-        <span className="text-gray-500 text-xs">Order #42851</span>
+        <span className="text-text-tertiary text-xs font-mono">
+          Order #42851
+        </span>
       </div>
 
       {/* KDS Content */}
       <div className="p-4">
         {isAutonomous ? (
           <>
-            {/* AV Alert Banner */}
-            <div className="bg-amber-500 text-black px-3 py-2 rounded-md text-center font-bold text-sm mb-3">
+            <div className="bg-accent text-black px-3 py-2 rounded-md text-center font-bold text-sm mb-3">
               ROBOT DELIVERY
             </div>
 
-            {/* Status */}
-            <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+            <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1">
               Status
             </div>
             <div className="text-white text-sm mb-3">{status}</div>
 
-            {/* Vehicle Info */}
-            <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+            <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1">
               Vehicle
             </div>
             <div className="text-white text-sm mb-3">{vehicleInfo}</div>
 
-            {/* Passcode - prominent display */}
             {passcode ? (
-              <div className="bg-blue-600 rounded-lg p-4 mb-3">
-                <div className="text-blue-200 text-xs uppercase tracking-wider mb-1">
+              <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mb-3">
+                <div className="text-accent text-xs uppercase tracking-wider mb-1">
                   Enter This Code on Robot
                 </div>
                 <div className="text-white text-4xl font-bold font-mono tracking-[0.3em] text-center">
@@ -62,32 +60,31 @@ export default function KdsMockup({
                 </div>
               </div>
             ) : (
-              <div className="bg-red-900/50 border border-red-700 rounded-lg p-3 mb-3">
-                <div className="text-red-300 text-sm font-medium">
+              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-3 mb-3">
+                <div className="text-red-400 text-sm font-medium">
                   Passcode not available
                 </div>
-                <div className="text-red-400 text-xs mt-1">
+                <div className="text-red-400/70 text-xs mt-1">
                   Contact support if robot has arrived
                 </div>
               </div>
             )}
 
-            {/* Handoff Instructions */}
             {instructions ? (
               <div>
-                <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+                <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1">
                   Loading Instructions
                 </div>
-                <div className="text-green-400 text-sm bg-gray-800 rounded p-2">
+                <div className="text-accent text-sm bg-surface-2 rounded p-2 border border-border">
                   {instructions}
                 </div>
               </div>
             ) : (
               <div>
-                <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+                <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1">
                   Loading Instructions
                 </div>
-                <div className="text-gray-500 text-sm bg-gray-800 rounded p-2">
+                <div className="text-text-tertiary text-sm bg-surface-2 rounded p-2 border border-border">
                   No specific instructions provided
                 </div>
               </div>
@@ -95,26 +92,25 @@ export default function KdsMockup({
           </>
         ) : (
           <>
-            {/* Standard delivery display */}
-            <div className="bg-gray-700 px-3 py-2 rounded-md text-center font-medium text-sm text-gray-300 mb-3">
+            <div className="bg-surface-2 px-3 py-2 rounded-md text-center font-medium text-sm text-text-secondary mb-3 border border-border">
               COURIER DELIVERY
             </div>
 
-            <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+            <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1">
               Driver
             </div>
             <div className="text-white text-sm mb-3">
               {driverName || "John"}
             </div>
 
-            <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+            <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1">
               Vehicle
             </div>
             <div className="text-white text-sm mb-3">
               {vehicleInfo || "Silver Toyota Camry"}
             </div>
 
-            <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+            <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1">
               Status
             </div>
             <div className="text-white text-sm">{status}</div>

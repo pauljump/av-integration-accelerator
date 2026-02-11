@@ -15,16 +15,16 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <nav className="bg-black border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+        <div className="flex items-center justify-between h-14">
+          <Link href="/" className="flex items-center gap-2.5">
+            <div className="w-7 h-7 bg-accent rounded-md flex items-center justify-center">
               <svg
-                className="w-5 h-5 text-white"
+                className="w-4 h-4 text-black"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={2}
+                strokeWidth={2.5}
                 stroke="currentColor"
               >
                 <path
@@ -34,13 +34,13 @@ export default function Navigation() {
                 />
               </svg>
             </div>
-            <span className="font-semibold text-gray-900 hidden sm:block">
+            <span className="font-semibold text-white text-sm tracking-tight">
               RoboBuilder
             </span>
-          </div>
+          </Link>
 
           <div className="flex items-center">
-            <div className="flex bg-gray-100 rounded-lg p-1 gap-1">
+            <div className="flex gap-0.5">
               {sections.map((section, index) => {
                 const isActive =
                   pathname === section.href ||
@@ -55,12 +55,12 @@ export default function Navigation() {
                       flex items-center gap-1.5
                       ${
                         isActive
-                          ? "bg-white text-blue-600 shadow-sm"
-                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                          ? "bg-surface-2 text-accent"
+                          : "text-text-secondary hover:text-white hover:bg-surface"
                       }
                     `}
                   >
-                    <span className="text-xs text-gray-400 font-mono">
+                    <span className="text-xs text-text-tertiary font-mono">
                       {index + 1}
                     </span>
                     <span>{section.label}</span>

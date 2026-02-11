@@ -19,7 +19,7 @@ const steps = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
       </svg>
     ),
-    avField: "is_autonomous → true",
+    avField: "is_autonomous \u2192 true",
   },
   {
     title: "Robot Arrives",
@@ -57,34 +57,33 @@ const steps = [
 export default function Timeline() {
   return (
     <div className="relative">
-      {/* Connection line */}
-      <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gray-200" />
+      <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-border" />
 
       <div className="space-y-6">
         {steps.map((step, index) => (
           <div key={index} className="relative flex items-start gap-4">
-            {/* Icon circle */}
             <div
               className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${
                 step.avField
-                  ? "bg-blue-100 text-blue-600 ring-2 ring-blue-200"
-                  : "bg-gray-100 text-gray-500"
+                  ? "bg-accent/10 text-accent ring-1 ring-accent/30"
+                  : "bg-surface-2 text-text-tertiary ring-1 ring-border"
               }`}
             >
               {step.icon}
             </div>
 
-            {/* Content */}
             <div className="flex-1 pt-1.5">
               <div className="flex items-center gap-2 flex-wrap">
-                <h4 className="font-semibold text-gray-900">{step.title}</h4>
+                <h4 className="font-semibold text-white">{step.title}</h4>
                 {step.avField && (
-                  <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-mono rounded">
+                  <span className="px-2 py-0.5 bg-accent/10 text-accent text-xs font-mono rounded border border-accent/20">
                     {step.avField}
                   </span>
                 )}
               </div>
-              <p className="text-sm text-gray-600 mt-0.5">{step.description}</p>
+              <p className="text-sm text-text-secondary mt-0.5">
+                {step.description}
+              </p>
             </div>
           </div>
         ))}

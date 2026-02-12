@@ -65,3 +65,85 @@ pre {
 ::selection {
   background: #06c16740;
 }
+
+/* ============================================================================
+   Animations for Hero Simulation & KDS Reference
+   All GPU-accelerated (transform/opacity only)
+   ============================================================================ */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(6, 193, 103, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(6, 193, 103, 0.3);
+  }
+}
+
+@keyframes digitReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes stepPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.15);
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 0.4s ease-out both;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out 3;
+}
+
+.animate-digit-reveal {
+  animation: digitReveal 0.4s ease-out both;
+}
+
+.animate-digit-reveal-1 { animation-delay: 0.1s; }
+.animate-digit-reveal-2 { animation-delay: 0.2s; }
+.animate-digit-reveal-3 { animation-delay: 0.3s; }
+.animate-digit-reveal-4 { animation-delay: 0.4s; }
+
+.animate-step-pulse {
+  animation: stepPulse 2s ease-in-out infinite;
+}
+
+/* Accessibility: disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-slide-up,
+  .animate-pulse-glow,
+  .animate-digit-reveal,
+  .animate-digit-reveal-1,
+  .animate-digit-reveal-2,
+  .animate-digit-reveal-3,
+  .animate-digit-reveal-4,
+  .animate-step-pulse {
+    animation: none !important;
+  }
+}

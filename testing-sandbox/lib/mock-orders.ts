@@ -152,14 +152,14 @@ export function generateOrderBeforeAVAssignment(): Order {
 
 export type AVProvider = "serve" | "nuro" | "waymo" | "coco" | "avride";
 
-interface AVConfig {
+export interface AVConfig {
   make: string;
   model: string;
   color: string;
   handoffInstructions: string;
 }
 
-function getAVConfig(provider: AVProvider): AVConfig {
+export function getAVConfig(provider: AVProvider): AVConfig {
   const configs: Record<AVProvider, AVConfig> = {
     serve: {
       make: "Serve Robotics",

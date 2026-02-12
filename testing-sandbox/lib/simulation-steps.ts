@@ -24,6 +24,8 @@ export interface SimulationStep {
     passcode: string | null;
     handoff_instructions: string | null;
   };
+  heroDuration?: number;
+  heroHighlight?: string;
 }
 
 export const simulationSteps: SimulationStep[] = [
@@ -70,6 +72,8 @@ export const simulationSteps: SimulationStep[] = [
       handoff_instructions:
         "Enter code on keypad. Lift lid. Place food inside. Close lid.",
     },
+    heroDuration: 5000,
+    heroHighlight: "passcode",
   },
   {
     id: 3,

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
-import { simulationSteps } from "@/lib/simulation-steps";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { simulationSteps, generateOrderForStep } from "@/lib/simulation-steps";
 import { kdsStates } from "@/lib/kds-data";
 import KdsReference from "@/components/KdsReference";
 
@@ -11,11 +11,89 @@ const MAX_LOOPS = 2;
 // Map simulation step index to kdsStates index
 const stepToKdsState = [0, 1, 2, 3, 4, 5];
 
+// Stable timestamp so JSON diffs don't show false changes on estimated_pickup_time
+const STABLE_PICKUP_TIME = "2025-07-15T14:35:00.000Z";
+
+function stabilizeOrder(order: ReturnType<typeof generateOrderForStep>) {
+  return {
+    ...order,
+    deliveries: order.deliveries.map((d) => ({
+      ...d,
+      estimated_pickup_time: STABLE_PICKUP_TIME,
+    })),
+  };
+}
+
+function PayloadView({ currentStep }: { currentStep: number }) {
+  const { currentLines, changedIndices } = useMemo(() => {
+    const currentOrder = stabilizeOrder(
+      generateOrderForStep(simulationSteps[currentStep])
+    );
+    const curLines = JSON.stringify(currentOrder, null, 2).split("\n");
+
+    if (currentStep === 0) {
+      return { currentLines: curLines, changedIndices: new Set<number>() };
+    }
+
+    const prevOrder = stabilizeOrder(
+      generateOrderForStep(simulationSteps[currentStep - 1])
+    );
+    const prevLines = JSON.stringify(prevOrder, null, 2).split("\n");
+
+    const changed = new Set<number>();
+    const maxLen = Math.max(curLines.length, prevLines.length);
+    for (let i = 0; i < maxLen; i++) {
+      if (curLines[i] !== prevLines[i]) {
+        changed.add(i);
+      }
+    }
+
+    return { currentLines: curLines, changedIndices: changed };
+  }, [currentStep]);
+
+  return (
+    <div className="bg-[#0d1117] rounded-lg border border-border overflow-hidden">
+      <div className="flex items-center justify-between px-3 py-1.5 border-b border-border bg-surface-2/50">
+        <span className="text-[10px] text-text-tertiary font-mono">
+          webhook payload — step {currentStep + 1}
+        </span>
+        {changedIndices.size > 0 && (
+          <span className="text-[10px] text-accent font-mono">
+            {changedIndices.size} field{changedIndices.size !== 1 ? "s" : ""} changed
+          </span>
+        )}
+      </div>
+      <div className="overflow-auto max-h-[200px]">
+        <pre className="py-1.5">
+          {currentLines.map((line, i) => {
+            const isChanged = changedIndices.has(i);
+            return (
+              <div
+                key={i}
+                className={`px-3 font-mono text-xs leading-5 ${
+                  isChanged
+                    ? "bg-accent/10 border-l-2 border-accent"
+                    : ""
+                }`}
+              >
+                <span className={isChanged ? "text-accent" : "text-text-secondary"}>
+                  {line}
+                </span>
+              </div>
+            );
+          })}
+        </pre>
+      </div>
+    </div>
+  );
+}
+
 export default function HeroSimulation() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
   const [animatePasscode, setAnimatePasscode] = useState(false);
+  const [activeTab, setActiveTab] = useState<"action" | "payload">("action");
   const loopCountRef = useRef(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -133,12 +211,41 @@ export default function HeroSimulation() {
             <h3 className="text-2xl font-bold text-white mb-1">{step.title}</h3>
             <p className="text-text-secondary text-sm mb-4">{step.subtitle}</p>
 
-            <div className="bg-surface-2 rounded-lg p-4 border border-border">
-              <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1.5">
-                Crew Action
-              </div>
-              <p className="text-sm text-text-secondary">{step.crewAction}</p>
+            {/* Tabs */}
+            <div className="flex gap-1 mb-3">
+              <button
+                onClick={() => setActiveTab("action")}
+                className={`px-3 py-1 text-xs font-medium rounded transition ${
+                  activeTab === "action"
+                    ? "bg-surface-2 text-white border border-border"
+                    : "text-text-tertiary hover:text-text-secondary"
+                }`}
+              >
+                What Happens
+              </button>
+              <button
+                onClick={() => setActiveTab("payload")}
+                className={`px-3 py-1 text-xs font-medium rounded transition ${
+                  activeTab === "payload"
+                    ? "bg-surface-2 text-white border border-border"
+                    : "text-text-tertiary hover:text-text-secondary"
+                }`}
+              >
+                Payload
+              </button>
             </div>
+
+            {/* Tab Content */}
+            {activeTab === "action" ? (
+              <div className="bg-surface-2 rounded-lg p-4 border border-border">
+                <div className="text-text-tertiary text-xs uppercase tracking-wider mb-1.5">
+                  Crew Action
+                </div>
+                <p className="text-sm text-text-secondary">{step.crewAction}</p>
+              </div>
+            ) : (
+              <PayloadView currentStep={currentStep} />
+            )}
           </div>
         </div>
 

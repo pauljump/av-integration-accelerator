@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#DEPENDREQ-11815] Studio simulator to support autonomous trips, externally</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://jira.uberinternal.com/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [DEPENDREQ-11815]&nbsp;<a href="https://jira.uberinternal.com/browse/DEPENDREQ-11815">Studio simulator to support autonomous trips, externally</a>
+            <span class="subText">
+               Created: 12/Oct/23                   &nbsp;Updated: 09/Feb/26
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">Committed</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://jira.uberinternal.com/secure/BrowseProject.jspa?id=64103">Dependency Requests</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Component/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Dependency Request
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                P1
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                            <a class="user-hover" rel="irisj@uber.com" id="word_reporter_irisj@uber.com" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=irisj%40uber.com">Iris Jiang</a>
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                            <a class="user-hover" rel="gsaral@uber.com" id="word_assignee_gsaral@uber.com" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=gsaral%40uber.com">Gaurav Saral</a>
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-27890752-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            exec-stakeholder-asks-for-PlatformEng                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original Estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Requesting Asset:</b></td>
+                <td id="customfield_50604-27890752-value" class="value" bgcolor="#ffffff" width="80%">
+    
+         <div class="rlabs-customfield-viewdialog-object" style="display:inline-block" data-mouse-trigger="click" data-key="UOWN-47839" data-attributes-to-show-status="not_loaded" data-attribute-names-to-show="">
+            <div class="rlabs-customfield-viewdialog-object-info" title="Autonomous Mobility and Delivery">
+                <span style="background-image:  url('https://jira.uberinternal.com/rest/insight/1.0/objecttype/1022/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">Autonomous Mobility and Delivery</span></span>
+            </div>
+            <div class="rlabs-customfield-viewdialog-object-attributes"></div>
+       </div> 
+      </td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Receiving Asset:</b></td>
+                <td id="customfield_50603-27890752-value" class="value" bgcolor="#ffffff" width="80%">
+    
+         <div class="rlabs-customfield-viewdialog-object" style="display:inline-block" data-mouse-trigger="click" data-key="UOWN-49757" data-attributes-to-show-status="not_loaded" data-attribute-names-to-show="">
+            <div class="rlabs-customfield-viewdialog-object-info" title="Studio Platform">
+                <span style="background-image:  url('https://jira.uberinternal.com/rest/insight/1.0/objecttype/1024/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">Studio Platform</span></span>
+            </div>
+            <div class="rlabs-customfield-viewdialog-object-attributes"></div>
+       </div> 
+      </td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Intake Manager:</b></td>
+                <td id="customfield_50605-27890752-value" class="value" bgcolor="#ffffff" width="80%">            <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://www.gravatar.com/avatar/07e24a97b6e4c5574f7fbd11fe8e95bb?d=mm&amp;s=48" alt="Gaurav Saral" /></span></span>
+        <span class="tinylink">        <span class="user-hover" rel="gsaral@uber.com" id="user_cf_gsaral@uber.com">Gaurav Saral</span></span>
+    </td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Initial Priority Recommendation:</b></td>
+                <td id="customfield_44224-27890752-value" class="value" bgcolor="#ffffff" width="80%">    P1
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Dependency Type:</b></td>
+                <td id="customfield_44225-27890752-value" class="value" bgcolor="#ffffff" width="80%">    Development
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Funded Status:</b></td>
+                <td id="customfield_44231-27890752-value" class="value" bgcolor="#ffffff" width="80%">    Funded
+</td>
+            </tr>
+                                                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Target Term:</b></td>
+                <td id="customfield_44227-27890752-value" class="value" bgcolor="#ffffff" width="80%">    2026 - H1
+</td>
+            </tr>
+                                                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>SLA Date:</b></td>
+                <td id="customfield_44230-27890752-value" class="value" bgcolor="#ffffff" width="80%">            <span title="23/Oct/23 4:56 PM"><time class="livestamp allow-future" datetime="2023-10-23T16:56:00-0400">23/Oct/2023 4:56 PM</time></span>
+    </td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <p>We have a studio simulator integration with autonomous trips ticket <a href="https://jira.uberinternal.com/browse/DEPENDREQ-8365" class="external-link" rel="nofollow">here</a>. This dependency task is very similar to the previous one  where this aims to make the autonomous integrated studio simulator externally exposed either via UI or endpoints integration. This allow the external partners to run e2e test so that this will help our new autonomous vehicle partners to test their API integration and experience when launching with Uber.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Comments</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="grid" style="margin: 0;">
+                <tr id="comment-header-83581217"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">06/Feb/26</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-83581217"><td bgcolor="#ffffff">
+            <p>Sagar Talla commented: </p>
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<td class='confluenceTd'>Exec Summary:</td>
+<td class='confluenceTd'>Secured stakeholder approval on final requirements and <b>Entity Relationship Diagram (ERD)</b>.<br/>
+Initiated a comprehensive <b>security evaluation</b> to ensure platform integrity prior to launch.</td>
+</tr>
+<tr>
+<td class='confluenceTd'>Progress:</td>
+<td class='confluenceTd'>Created <a href="https://simulator.uberinternal.com/" class="external-link" target="_blank" rel="nofollow noopener">simulator.uberinternal.com</a> domain to access the simulator flow via the External-prod Environment.<br/>
+Active <b>penetration testing</b> is underway on the internal test domain.<br/>
+Hardening the environment by <b>decommissioning unwanted modules</b> and features to minimize the attack surface for external users.</td>
+</tr>
+<tr>
+<td class='confluenceTd'>Plans:</td>
+<td class='confluenceTd'>Filter the data flow to expose only what is relevant to external users.<br/>
+Continue the removal of vulerability causing modules to prevent the exposure of sensitive data from external user perspective.<br/>
+Enhance the database logic to classify users as internal or external.</td>
+</tr>
+</tbody></table>
+</div>
+
+        </td></tr>
+                <tr id="comment-header-80816313"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="gsaral@uber.com" id="word_commented_gsaral@uber.com" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=gsaral%40uber.com">Gaurav Saral</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">14/Nov/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-80816313"><td bgcolor="#ffffff">
+            <p><a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=megan.jensen%40uber.com" class="user-hover" rel="megan.jensen@uber.com">Megan Robledo Jensen</a> : not sure why automation closed this..  we are committed to doing this.</p>
+        </td></tr>
+                <tr id="comment-header-80813725"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="megan.jensen@uber.com" id="word_commented_megan.jensen@uber.com" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=megan.jensen%40uber.com">Megan Robledo Jensen</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">14/Nov/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-80813725"><td bgcolor="#ffffff">
+            <p><a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=gsaral%40uber.com" class="user-hover" rel="gsaral@uber.com">Gaurav Saral</a> can you please share some context on 'Jira based' OKRs if the OKR I provided below doesn't work?</p>
+        </td></tr>
+                <tr id="comment-header-80774354"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">06/Nov/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-80774354"><td bgcolor="#ffffff">
+            <p>Gaurav Saral commented: <br/>
+<a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=megan.jensen%40uber.com" class="user-hover" rel="megan.jensen@uber.com">Megan Robledo Jensen</a> A Jira based OKR is needed, can you please share the OKR you are working on which this dependency request will be contributing to</p>
+        </td></tr>
+                <tr id="comment-header-80774350"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">05/Nov/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-80774350"><td bgcolor="#ffffff">
+            <p>Megan Robledo Jensen commented: <br/>
+Hi all! The OKR that this will impact is # of weekly AV deliveries completed, as there will be a bottleneck in getting POS merchants onto the platform (which make up &gt;70% of deliveries on the UE platform). </p>
+        </td></tr>
+                <tr id="comment-header-80774344"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">05/Nov/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-80774344"><td bgcolor="#ffffff">
+            <p>Gaurav Saral commented: <br/>
+<a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=irisj%40uber.com" class="user-hover" rel="irisj@uber.com">Iris Jiang</a> can you please link the OKR on your team side which this dependency request will be contributing towards ? i.e. not picking up this dependency request will impact which of your OKR ? in case there is lack of clear business impact this will not be prioritised. </p>
+
+<p> </p>
+
+<p>cc: <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sagart%40uber.com" class="user-hover" rel="sagart@uber.com">Sagar Talla</a> <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=shash.srivastava%40uber.com" class="user-hover" rel="shash.srivastava@uber.com">Shashwat Srivastava</a> </p>
+        </td></tr>
+                <tr id="comment-header-79964679"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="megan.jensen@uber.com" id="word_commented_megan.jensen@uber.com" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=megan.jensen%40uber.com">Megan Robledo Jensen</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">20/Oct/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-79964679"><td bgcolor="#ffffff">
+            <p>Attaching the business case here: <a href="https://docs.google.com/document/d/1pvC7mClbeCM4FzX1PwoQcjGXrOMZ-qT_aKRKepQ_dOQ/edit?usp=sharing" class="external-link" target="_blank" rel="nofollow noopener">https://docs.google.com/document/d/1pvC7mClbeCM4FzX1PwoQcjGXrOMZ-qT_aKRKepQ_dOQ/edit?usp=sharing</a></p>
+        </td></tr>
+                <tr id="comment-header-79766987"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">13/Oct/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-79766987"><td bgcolor="#ffffff">
+            <p>Karuna Sangat commented: <br/>
+Requested <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sagart%40uber.com" class="user-hover" rel="sagart@uber.com">Sagar Talla</a> to review this as scope is increased and dependreq is reopened on 15th Sep 2025.</p>
+        </td></tr>
+                <tr id="comment-header-79529780"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="megan.jensen@uber.com" id="word_commented_megan.jensen@uber.com" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=megan.jensen%40uber.com">Megan Robledo Jensen</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">06/Oct/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-79529780"><td bgcolor="#ffffff">
+            <p> Hi all - sharing the business case for why we need to prioritizing this tool. </p>
+
+<p><b>TLDR:</b> <br/>
+<b>AV delivery strengthens Uber's platform leadership for autonomous tech and drives cost efficiency for the business, but scaling is blocked by lack of POS integration. POS integration is complicated by POS partners being unable to self-test, requiring PEng resourcing and completely blocking unmanaged POS providers (30% of GBs). A Studio Simulator would enable independent AV testing for POS providers, remove PEng bottlenecks, and accelerate adoption.</b></p>
+        </td></tr>
+                <tr id="comment-header-79136456"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">23/Sep/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-79136456"><td bgcolor="#ffffff">
+            <p>Jira Bot commented: <br/>
+Dependency Requests deferred to 2026 have been transitioned to “Needs Triage”.  Requesting Team, please ensure this request is still valid and accurate, and update as appropriate.</p>
+        </td></tr>
+                <tr id="comment-header-78915388"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">16/Sep/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-78915388"><td bgcolor="#ffffff">
+            <p>Iris Jiang commented: <br/>
+Ic. Thanks for the update <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sagart%40uber.com" class="user-hover" rel="sagart@uber.com">Sagar Talla</a> <br/>
+cc. <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=pawelsz%40uber.com" class="user-hover" rel="pawelsz@uber.com">Pawel Szczodruch</a> <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=mesut.arik%40uber.com" class="user-hover" rel="mesut.arik@uber.com">Mesut Arik</a> since this is a request from the PoS partner eng side</p>
+        </td></tr>
+                <tr id="comment-header-78897222"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">16/Sep/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-78897222"><td bgcolor="#ffffff">
+            <p>Sagar Talla commented: <br/>
+U4B team has been studio simulator for external vendors, External vendors do not have access to the web experience, they only have access to startTest Endpoint via edge-gateway.</p>
+
+<p>So its a blackbox kind of experience.With AMD simple edge endpoint to start a test/simulation might not work because of rider on mobile testing. I'm assuming we might have to build an UX that is AMD specific and accessible via <a href="http://uber.com/" class="external-link" target="_blank" rel="nofollow noopener">uber.com</a></p>
+
+<p><a href="https://uber.slack.com/archives/C08BG27KLS2/p1756399995899369" class="external-link" target="_blank" rel="nofollow noopener">https://uber.slack.com/archives/C08BG27KLS2/p1756399995899369</a></p>
+
+<p>We may not be able to commit this in h2 2025. We can revisit in H1 2026</p>
+        </td></tr>
+                <tr id="comment-header-78882523"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="mesut.arik@uber.com" id="word_commented_mesut.arik@uber.com" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=mesut.arik%40uber.com">Mesut Arik</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">15/Sep/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-78882523"><td bgcolor="#ffffff">
+            <p><a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=gsaral%40uber.com" class="user-hover" rel="gsaral@uber.com">Gaurav Saral</a> we're reopening this request. I think this was closed incorrectly, as the request here hasn't been delivered. <br/>
+We would like to expose the studio simulator to <b>external partners</b> via UI or endpoints to enable external partner testing. Can you please triage and comment on the feasibility of this? cc <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=megan.jensen%40uber.com" class="user-hover" rel="megan.jensen@uber.com">Megan Robledo Jensen</a> <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=jkirn%40uber.com" class="user-hover" rel="jkirn@uber.com">John Kirn</a> </p>
+        </td></tr>
+                <tr id="comment-header-73678905"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">28/Mar/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-73678905"><td bgcolor="#ffffff">
+            <p>Gaurav Saral commented: <br/>
+closing this as happy paths committed for Q1 are delivered.</p>
+
+<p> </p>
+
+<p><a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=irisj%40uber.com" class="user-hover" rel="irisj@uber.com">Iris Jiang</a> requesting you to create a new dependency request for Q2 for sad paths.</p>
+        </td></tr>
+                <tr id="comment-header-73660400"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">28/Mar/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-73660400"><td bgcolor="#ffffff">
+            <p>Gaurav Saral commented: <br/>
+Simulator team has delivered below in Q1 (as discussed earlier)</p>
+<ul>
+	<li>Mobility Happy Path</li>
+	<li>Eats Happy Path</li>
+</ul>
+
+
+<p>details can be seen in <a href="https://docs.google.com/document/d/1OJBFfmCh1JDyxNNbGxtXCBYkXg0RxLuilo41aw6T9SA/edit?tab=t.0" class="external-link" target="_blank" rel="nofollow noopener">https://docs.google.com/document/d/1OJBFfmCh1JDyxNNbGxtXCBYkXg0RxLuilo41aw6T9SA/edit?tab=t.0</a> </p>
+
+<p> </p>
+
+<p>in Q2 simulator team will work on sad paths.</p>
+
+<p> </p>
+        </td></tr>
+                <tr id="comment-header-73659004"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">28/Mar/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-73659004"><td bgcolor="#ffffff">
+            <p>Sagar Talla commented: <br/>
+<a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sgp%40uber.com" class="user-hover" rel="sgp@uber.com">Swati Gupta</a> waiting on reporter. </p>
+
+<p>Reporter need some time to test. Might have to extend deadline a bit</p>
+        </td></tr>
+                <tr id="comment-header-73648283"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">27/Mar/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-73648283"><td bgcolor="#ffffff">
+            <p>Swati Gupta commented: <br/>
+<a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sagart%40uber.com" class="user-hover" rel="sagart@uber.com">Sagar Talla</a> is this task complete?</p>
+        </td></tr>
+                <tr id="comment-header-72203484"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">04/Feb/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-72203484"><td bgcolor="#ffffff">
+            <p>Karuna Sangat commented: <br/>
+Feb 4, 2025 | Studio Platform &lt;&gt; Autonomous Vehicle<br/>
+Attendees: Gaurav Saral Karuna Sangat Yang Zhao Andrew Irish Sagar Talla Puneet Paneri</p>
+
+<p>Detailed notes <a href="https://docs.google.com/document/d/1OJBFfmCh1JDyxNNbGxtXCBYkXg0RxLuilo41aw6T9SA/edit?tab=t.0" class="external-link" target="_blank" rel="nofollow noopener">here</a></p>
+        </td></tr>
+                <tr id="comment-header-72094204"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">30/Jan/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-72094204"><td bgcolor="#ffffff">
+            <p>Sagar Talla commented: <br/>
+Notes <a href="https://docs.google.com/document/d/14gCtLrtpNtXrRTHslpQbDy64LzosU5AQZJrJvTntYUc/edit?usp=sharing" class="external-link" target="_blank" rel="nofollow noopener">https://docs.google.com/document/d/14gCtLrtpNtXrRTHslpQbDy64LzosU5AQZJrJvTntYUc/edit?usp=sharing</a></p>
+
+<p> </p>
+<ul>
+	<li>UX for AMD on simulator
+	<ul>
+		<li>We’’ll have new flow category similar to 3p taxi etc.</li>
+	</ul>
+	</li>
+	<li>Test Accounts for autonomous vehicles
+	<ul>
+		<li><a href="https://sg.uberinternal.com/code.uber.internal/uber-code/go-code@main/-/blob/src/code.uber.internal/amd/amd-api/integration_tests/v1/util/setup.go?L53" class="external-link" target="_blank" rel="nofollow noopener">current test account setup</a></li>
+	</ul>
+	</li>
+	<li>Flows walkthrough for autonomous vehicles
+	<ul>
+		<li>py <a href="https://sg.uberinternal.com/code.uber.internal/uber-code/go-code/-/blob/src/code.uber.internal/amd/amd-api/scripts/testing/auto-av.py" class="external-link" target="_blank" rel="nofollow noopener">script</a> walk through demo</li>
+		<li>Simulator flow implementation(engineering resources)</li>
+		<li><a href="https://sg.uberinternal.com/code.uber.internal/uber-code/go-code@main/-/tree/src/code.uber.internal/amd/amd-api/integration_tests/v1/tests" class="external-link" target="_blank" rel="nofollow noopener">CTF Flows</a></li>
+	</ul>
+	</li>
+	<li>How many test cases or test flows can be onboarded during H1 2025.
+	<ul>
+		<li>We are targeting 1 happy flow in q1 for 
+		<ul>
+			<li>Rides </li>
+			<li>Eats</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+
+<p>full list <a href="https://docs.google.com/document/d/1B0464stdK3sIgqoYv-yjCnX-R3qu7AciOnbubtcv5lo/edit?tab=t.0#heading=h.phd3vlaegmcr" class="external-link" target="_blank" rel="nofollow noopener">here</a></p>
+        </td></tr>
+                <tr id="comment-header-72094201"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">30/Jan/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-72094201"><td bgcolor="#ffffff">
+            <p>Karuna Sangat commented: <br/>
+This is committed for H1 2025. We will be documenting the scope for H1 2025. </p>
+
+<p><a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sagart%40uber.com" class="user-hover" rel="sagart@uber.com">Sagar Talla</a><a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=gsaral%40uber.com" class="user-hover" rel="gsaral@uber.com">Gaurav Saral</a> Please do the needful.</p>
+        </td></tr>
+                <tr id="comment-header-71975329"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">27/Jan/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-71975329"><td bgcolor="#ffffff">
+            <p>Karuna Sangat commented: <br/>
+<a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sagart%40uber.com" class="user-hover" rel="sagart@uber.com">Sagar Talla</a> to document the scope for H1'25 and impact. Estimated time needed to implement this.</p>
+        </td></tr>
+                <tr id="comment-header-70062961"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">12/Nov/24</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-70062961"><td bgcolor="#ffffff">
+            <p>Fred Chan commented: <br/>
+updated the description. let me know if its still unclear. we can also schedule a sync meeting if it helps.</p>
+        </td></tr>
+                <tr id="comment-header-70061876"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">31/Oct/24</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-70061876"><td bgcolor="#ffffff">
+            <p>Sagar Talla commented: <br/>
+Need more clarity on engineering requirement expected form studio team</p>
+        </td></tr>
+                <tr id="comment-header-65677355"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">06/Jun/24</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-65677355"><td bgcolor="#ffffff">
+            <p>Vasu Kakkirala commented: <br/>
+we wont be able to commit this in H2 24 to attend P0's and shortage of resources, We will consider this in H1 25</p>
+        </td></tr>
+                <tr id="comment-header-65320422"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">23/May/24</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-65320422"><td bgcolor="#ffffff">
+            <p>Iris Jiang commented: <br/>
+<a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=sgp%40uber.com" class="user-hover" rel="sgp@uber.com">Swati Gupta</a> Hi! The requirement here is still valid and we still want studio simulator to be available externally. For H2 2024 we are onboarding more new autonomous partners, and this will save a lot of internal and external eng time if they can test their trips directly using studio simulator</p>
+        </td></tr>
+                <tr id="comment-header-65314741"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">22/May/24</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-65314741"><td bgcolor="#ffffff">
+            <p>Swati Gupta commented: <br/>
+Confirming if this ask created in 2023 is still valid for H2'24 as is or description/ask need a refresh?</p>
+        </td></tr>
+                <tr id="comment-header-63929934"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">02/Apr/24</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-63929934"><td bgcolor="#ffffff">
+            <p>Jira Bot commented: <br/>
+This issue has been unassigned as current assignee <a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=weih%40uber.com" class="user-hover" rel="weih@uber.com">Wei Han [X]</a> is no longer at Uber. If this issue is not reassigned in 7 days, please reach out to the the project (or team) lead for reassignment.</p>
+        </td></tr>
+                <tr id="comment-header-60390083"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">03/Nov/23</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-60390083"><td bgcolor="#ffffff">
+            <p>Wei Han commented: <br/>
+As mentioned, we plan to check the eligibility support externally. </p>
+        </td></tr>
+                <tr id="comment-header-60221424"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">27/Oct/23</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-60221424"><td bgcolor="#ffffff">
+            <p>Wei Han commented: <br/>
+After alignment, our team will propose the solution to support the external customers. We will go through some requirement from legal/privacy teams to figure out feasible or not, and if possible, will plan the roadmap and resource work on it. </p>
+        </td></tr>
+                <tr id="comment-header-59856227"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="+jira-bot" id="word_commented_+jira-bot" href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=%2Bjira-bot">Jira Bot</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">10/Oct/23</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-59856227"><td bgcolor="#ffffff">
+            <p>Swati Gupta commented: <br/>
+<a href="https://jira.uberinternal.com/secure/ViewProfile.jspa?name=weih%40uber.com" class="user-hover" rel="weih@uber.com">Wei Han [X]</a> please commit/not commit by Nov 3rd.</p>
+        </td></tr>
+            </table>
+Generated at Thu Feb 12 20:37:18 UTC 2026 by Paul Jump using Jira 10.3.16#10030016-sha1:d130eae65421e3c61021a8b379241874f1f8608f.
+
+</body>
+</html>
